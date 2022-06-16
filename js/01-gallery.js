@@ -2,14 +2,6 @@ import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 console.log(galleryItems);
 
-// Створення і рендер розмітки на підставі масиву даних galleryItems і наданого шаблону елемента галереї.
-// Реалізація делегування на div.gallery і отримання url великого зображення.
-
-// Підключення скрипту і стилів бібліотеки модального вікна basicLightbox.
-//  Використовуй CDN сервіс jsdelivr і додай у проект посилання на мініфіковані (.min) файли бібліотеки.
-// Відкриття модального вікна по кліку на елементі галереї. Для цього ознайомся з документацією і прикладами.
-// Заміна значення атрибута src елемента <img> в модальному вікні перед відкриттям.
-// Використовуй готову розмітку модального вікна із зображенням з прикладів бібліотеки basicLightbox.
 
 // Посилання на gallery (отримали доступ до gallery з HTML)
 const galleryContainer = document.querySelector(".gallery");
@@ -24,11 +16,6 @@ galleryContainer.insertAdjacentHTML("afterbegin", galleryMarkup);
 // Додавання слухача на всю галерею зображень
 galleryContainer.addEventListener("click", handleClick);
 
-// Лайфбокс
-// const lightboxEl = document.querySelector('.lightbox');
-// console.log(lightboxEl);
-// const buttonEl = document.querySelector('[data-action="close-lightbox"]');
-// console.log(buttonEl);
 
 // Функція створення галереї зображень
 function createGalleryItems(galleryItems) {
