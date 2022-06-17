@@ -14,8 +14,6 @@ const galleryMarkup = createGalleryItems(galleryItems);
 // Підключення галереї після div class="gallery" в розмітці
 galleryContainer.insertAdjacentHTML("afterbegin", galleryMarkup);
 
-// Додавання слухача на всю галерею зображень
-galleryContainer.addEventListener("click", handleClick);
 
 // Функція створення галереї зображень
 function createGalleryItems(galleryItems) {
@@ -30,19 +28,9 @@ function createGalleryItems(galleryItems) {
     .join("");
 }
 
-// Функція подія клік
-function handleClick(event) {
-  event.preventDefault();
-  console.dir(event.target);
-  if (event.target.nodeName === "IMG") {
-    const imgLink = event.target.dataset.source;
-    createModal(imgLink);
-  }
-}
 
-// Модальне вікно
-function createModal(link) {
+// Модальне вікно +  Функція подія клік
+
   let gallery = new SimpleLightbox(".gallery a",  { captionsData:`alt`, captionDelay:`250`});
-  gallery.on("show.simplelightbox", function () {});
-}
+
 
